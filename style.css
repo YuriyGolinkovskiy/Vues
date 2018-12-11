@@ -1,0 +1,246 @@
+#app {
+    width: 80%;
+    margin: auto;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    background-color: #251F16;
+}
+
+.flex-container > a {
+    background-color: #f1f1f1;
+    width: 50%;
+    margin: 3px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    line-height: 40px;
+    font-size: 30px;
+}
+
+.flex-container > p {
+    margin: 0 auto;
+    width: 60%;
+    margin-right: 5%;
+    text-align: justify;
+    line-height: 40px;
+    font-size: 30px;
+}
+
+.flex-container > image {
+    width: 40%;
+}
+
+.flex-container > a:hover {
+    background-color: #d6d6d6;
+}
+
+.beads {
+    list-style: none;
+    background: #EEE3DB;
+    margin: 0;
+    padding-left: 40px;
+    border-radius: 5px;
+}
+
+.beads li {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 40px;
+    border-bottom: 1px solid #D4D7D6;
+    position: relative;
+}
+
+.beads a {
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    line-height: 40px;
+    position: relative;
+}
+
+.beads a:before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 6px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #A58063;
+}
+
+.beads li:last-child {
+    border-bottom: none;
+}
+
+.beads li:before,
+.beads li:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.beads li:before {
+    top: calc(50% - 5px);
+    background: #E0926E;
+    left: -22px;
+    width: 10px;
+    height: 10px;
+    transition: 0.5s linear;
+}
+
+.beads li:after {
+    bottom: 6px;
+    left: -20px;
+    width: 6px;
+    height: 6px;
+    background: #A58063;
+}
+
+.beads li:hover:before {
+    background: #FFCE08;
+}
+
+ul {
+    border: 1px solid black;
+}
+
+.beads li:hover {
+    background-color: #eee;
+}
+
+.beads li:nth-child(2n) {
+    background-color: #ddd;
+}
+
+.beads li:nth-child(2n):hover {
+    background-color: #ccc;
+}
+
+button {
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    width: 140px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 45px;
+    margin: 20px 0px 0px 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #524f4e;
+    background: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+    transition: .3s;
+}
+
+.flex-container > button:hover {
+    background: #2EE59D;
+    box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+    color: white;
+}
+
+button:hover:disabled {
+    cursor: not-allowed;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 24px;
+    letter-spacing: 1px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    color: #465457;
+}
+
+.post h3:before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 5px);
+    left: 0;
+    right: 0;
+    height: 6px;
+    border-top: 2px solid #BBC9C9;
+    border-bottom: 2px solid #BBC9C9;
+    z-index: -1;
+}
+
+.post span {
+    background: white;
+    padding: 0 20px;
+}
+
+.addFavorites > button {
+    color: black;
+    box-shadow: 0 0 0 2px white;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    overflow: hidden;
+}
+
+.addFavorites > button > span {
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    z-index: 5;
+}
+
+.addFavorites > button:before,
+.addFavorites > button:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.addFavorites > button:before {
+    transform: translateX(-100%);
+    background: #e3e3e3;
+    transition: transform .3s cubic-bezier(.55, .055, .675, .19);
+}
+
+.addFavorites > button:after {
+    background: #c7c5c5;
+    transform: translateX(100%);
+    transition: transform .3s cubic-bezier(.16, .73, .58, .62) .3s;
+}
+
+.addFavorites > button:hover:before,
+.addFavorites > button:hover:after {
+    transform: translateX(0);
+}
+
+.comment {
+    padding: 10px;
+    border: 2px solid black;
+}
+
+.comment > p > span {
+    color: grey;
+}
+
+.message {
+    padding-top: 20px;
+    border-top: 2px dashed black;
+}
